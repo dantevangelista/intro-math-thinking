@@ -1,0 +1,77 @@
+\documentclass[11pt]{exam}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+
+\author{@dantevangelista}
+
+\headrule{}
+
+\begin{document}
+
+\lhead{\textbf{Intro to Math Thinking Fall 2024: Assignment 5}}
+
+\begin{enumerate}[leftmargin=0pt]
+
+\item[1.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\exists x \in \mathbb{N} \mid x^3 = 27$
+    \item $\exists x \in \mathbb{N} \mid x > 1000000$
+    \item $(\exists p \in \mathbb{N})(\exists q \in \mathbb{N})(p > 1 \land q > 1 \land n = pq)$
+\end{enumerate}
+
+\item[2.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\forall x \in \mathbb{N} \mid x^3 \neq 28$
+    \item $\forall n \in \mathbb{N} \mid 0 < n$
+    \item $(\forall p \in \mathbb{N})(\forall q \in \mathbb{N})((n = pq) \Rightarrow (p = 1 \lor q = 1))$ 
+\end{enumerate}
+
+\item[3.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\forall x \exists y L(x,y)$, where $L(x,y)$ means ,,x loves y"
+    \item $\forall x (Tall(x) \lor Short(x))$
+    \item $\forall x Tall(x) \lor \forall x Short(x)$
+    \item $\forall x \neg H(x)$, where $H(x)$ means is at home
+    \item $Comes(John) \Rightarrow \forall x (Woman(x) \Rightarrow Leaves(x))$
+    \item $\exists x (Man(x) \land Comes(x)) \Rightarrow \forall x (Woman(x) \Rightarrow Leaves(x))$
+\end{enumerate}
+
+\item[4.]
+\begin{enumerate}[label=(\alph*)]
+    \item $(\forall a \in \mathbb{R}) (\exists x \in \mathbb{R}) \mid x^2 + a = 0$
+    \item $(\forall a \in \mathbb{R}) [(a < 0) \Rightarrow (\exists x \in \mathbb{R}) (x^2 + a = 0)]$
+    \item $(\forall x \in \mathbb{R})(\exists p \in \mathbb{N})(\exists q \in \mathbb{N})[p = qx \lor p = -qx \lor x = 0]$
+    \item $(\exists x \in \mathbb{R})(\forall p \in \mathbb{N})(\forall q \in \mathbb{N})[p \neq nx \land p \neq -nx ]$
+    \item $(\forall y \in \mathbb{R})(\exists x \in \mathbb{R})[(x > y) \land (\forall m \in \mathbb{N})(\forall n \in \mathbb{N})(m \neq nx)]$
+\end{enumerate}
+
+\item[5.]
+\begin{enumerate}[label=(\alph*)]
+    \item $(\forall x \in C) \mid (D(x) \Rightarrow M(x))$
+    \item $(\forall x \in C) \mid (\neg D(x) \Rightarrow M(x))$
+    \item $(\forall x \in C) \mid (M(x) \Rightarrow D(x))$
+    \item $(\exists x \in C) \mid D(x) \land \neg M(x)$
+    \item $(\exists x \in C) \mid \neg D(x) \land M(x)$
+\end{enumerate}
+
+\item[6.] $\forall a \forall b [(a < b) \Rightarrow \exists c (Q(x) \land (a < c < b))]$
+
+\item[7.] F(p,t) means ,,You can fool person p at time t" \\
+$\exists t \forall p F(p,t) \land \exists p \forall t F(p,t) \land \neg \forall p \forall t F(p,t)$
+
+\item[8.] $\exists x \forall t A(x,t)$
+
+\item[9.] ,,Every 6 seconds a driver is involved in an accident" \\
+$\forall t \exists x A(x,t)$
+
+\end{enumerate}
+\end{document}

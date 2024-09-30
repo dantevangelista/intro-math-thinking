@@ -1,0 +1,124 @@
+\documentclass[11pt]{exam}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+
+\author{@dantevangelista}
+
+\headrule{}
+
+\begin{document}
+
+\lhead{\textbf{Intro to Math Thinking Fall 2024: Assignment 6}}
+
+\begin{enumerate}[leftmargin=0pt]
+
+\item[1.] $(\Rightarrow)$ Assume $\neg (\exists x A(x))$. If it is not the case that there exists an $x$, $A(x)$, then all $x$ must fail to satisfy $A(x)$. So, $\forall x$, $A(x)$ must be false. Thus, $\forall x [\neg A(x)]$. \\
+\\
+$(\Leftarrow)$ Assume $\forall x [\neg A(x)]$. If for all $x$ fail $A(x)$, then there does not exists an $x$, $A(x)$. So, $\exists x A(x)$ must be false. Thus, $\neg [\exists x A(x)]$
+
+\item[2.] Suppose there is an even prime $n \in \mathbb{N}$ bigger than 2. By definition of even, there exists an $a \in \mathbb{N}$ such that $n = 2a$. By definition of prime, $n$ must only be divisible by 1 and itself. $n$ is also divisible by 2, which is a contradiction.
+
+\item[3.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\forall x [S(x) \Rightarrow P(x)]$, where $S(x)$: is a student, $P(x)$: likes pizza
+    \item $\exists x (F(x) \Rightarrow \neg C(x))$, where $F(x)$: one of my friends, $C(x)$: has a car
+    \item $\exists x [E(x) \Rightarrow \neg M(x)]$, $E(x)$: elephants, $M(x)$: like muffins
+    \item $\forall x (T(x) \Rightarrow I(x))$, $T(x)$: is a triangle, $I(x)$: isosceles
+    \item $\exists x (S(x) \Rightarrow \neg H(x))$, $S(x)$: students in the class, $H(x)$: here today
+    \item $\forall x \exists y (L(x,y))$, $L(x,y)$: x loves y
+    \item $\neg \exists x \forall y L(x,y)$, $L(x,y)$: x loves y
+    \item $\exists x (M(x) \land C(x)) \Rightarrow (\forall W(x) \Rightarrow L(x))$, $M(x)$: is a man, $C(x)$: comes, $W(x)$: is a woman, $L(x)$: will leave
+    \item $\forall x (Tall(x) \lor Short(x))$
+    \item $(\forall x Tall(x)) \lor (\forall x Short(x))$
+    \item $\exists x (Precious(x) \Rightarrow  \neg Beautiful(x))$
+    \item $\neg \exists x \exists m L(x,m)$, $L(x,m)$: someone who loves me
+    \item $\exists x (S(x) \Rightarrow P(x))$, $S(x)$: American snake, $P(x)$: snake is poisonous
+    \item $\exists x (S(x) \land A(x)) \Rightarrow P(x)$, $S(x)$: is a snake, $A(x)$: is an American snake, $P(x)$: snake is poisonous
+\end{enumerate}
+
+\item[4.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\exists x [S(x) \Rightarrow \neg P(x)]$, where $S(x)$: is a student, $P(x)$: likes pizza \\
+    \textbf{There is a student who does not like pizza}
+    \item $\forall x [F(x) \Rightarrow C(x)]$, where $F(x)$: 1 of my friends, $C(x)$: has a car \\
+    \textbf{All of my friends have a car}
+    \item $\forall x [E(x) \Rightarrow M(x)]$, $E(x)$: elephants, $M(x)$: like muffins \\
+    \textbf{All elephants like muffins}
+    \item $\exists x [T(x) \Rightarrow \neg I(x)]$, $T(x)$: is a triangle, $I(x)$: isosceles \\
+    \textbf{There exists a triangle that is not isosceles}
+    \item $\forall x [S(x) \Rightarrow H(x)]$, $S(x)$: students in the class, $H(x)$: here today \\
+    \textbf{All students in the class are here today}
+    \item $\exists x \exists y (\neg L(x,y))$, $L(x,y)$: $x$ loves $y$ \\
+    \textbf{There exists someone who does not love somebody}
+    \item $\exists x \forall y L(x,y)$, $L(x,y)$: $x$ loves $y$ \\
+    \textbf{There exists someone who loves everybody}
+    \item $\forall x [(M(x) \land C(x)) \Rightarrow (\forall W(x) \Rightarrow \neg L(x))]$, $M(x)$: is a man, $C(x)$: comes, $W(x)$: is a woman, $L(x)$: will leave \\
+    \textbf{If a man comes, all the women will stay}
+    \item $\exists x [ Tall(x) \land Short(x)]$ \\
+    \textbf{There exists people who are tall and short}
+    \item $(\exists x Tall(x)) \land (\exists x Short(x))$ \\
+    \textbf{There exists some tall people and some short people}
+    \item $\forall x [Precious(x) \Rightarrow Beautiful(x)]$ \\
+    \textbf{All precious stones are beautiful}
+    \item $\exists x \exists m L(x,m)$, $L(x,m)$: someone who loves me \\
+    \textbf{There exists someone who loves me}
+    \item $\forall x (S(x) \Rightarrow \neg P(x))$, $S(x)$: American snake, $P(x)$: snake is poisonous \\
+    \textbf{All American snakes are not poisonous}
+    \item $\forall x (S(x) \land A(x)) \Rightarrow \neg P(x)$, $S(x)$: is a snake, $A(x)$: American snake, $P(x)$: snake is poisonous \\
+    \textbf{All American snakes are not poisonous}
+\end{enumerate}
+
+\item[5.]
+\begin{enumerate}[label=(\alph*)]
+    \item false
+    \item false
+    \item true
+    \item true
+    \item false
+    \item false
+    \item false
+    \item false
+\end{enumerate}
+
+\item[6.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\forall x [(2x + 3 < 5x + 1) \lor (2x + 3 > 5x + 1)]$
+    \item $\forall x [(x^2 < 2) \lor (x^2 > 2)]$
+    \item $\exists x \exists y [(y < x^2) \lor (y > x^2)]$
+    \item $\exists x \exists y [(y > x^2) \lor (y < x^2)]$
+    \item $\exists x \exists y \forall z [(xy < xz) \lor (xy > xz)]$
+    \item $\exists x \exists y \forall z [(xy < xz) \lor (xy > xz)]$
+    \item $\exists x [(x < 0) \Rightarrow [\forall y (y^2 < x) \lor (y^2 > x)]]$
+    \item $\exists x [(x < 0) \Rightarrow [\forall y (y^2 < x) \lor (y^2 > x)]]$
+\end{enumerate}
+
+\item[7.]
+\begin{enumerate}[label=(\alph*)]
+    \item $(\exists x \in \mathbb{N})(\exists y \in \mathbb{N})(x + y \neq 1)$
+    \item $(\exists x > 0)(\forall y < 0)(x + y \neq 0)$
+    \item $\forall x (\exists \epsilon > 0)[(x \leq -\epsilon) \lor (x \geq \epsilon)]$
+    \item $(\exists x \in \mathbb{N})(\exists y \in \mathbb{N})(\forall z \in \mathbb{N})(x + y \neq z^2)$
+\end{enumerate}
+
+\item[8.] $F(p,t)$: You can fool person p at time t \\
+\\
+OG: $\exists t \forall p F(p,t) \land \exists p \forall t F(p,t) \land \neg \forall p \forall t F(p,t)$ \\
+\\
+Neg: $\forall t \exists p \neg F(p,t) \lor \forall p \exists t \neg F(p,t) \lor \forall p \forall t F(p,t)$ \\
+\\
+\textbf{You can't fool some of the people all of the time, or for every person, you can't always fool them, or you can fool all the people all of the time}
+
+\item[9.] $f$ is $discontinuous$ at $a$: $(\exists \epsilon > 0)(\forall \delta > 0)(\exists x)[(|x - a| < \delta) \land (|f(x) - f(a)| \geq \epsilon)]$
+
+
+\end{enumerate}
+\end{document}

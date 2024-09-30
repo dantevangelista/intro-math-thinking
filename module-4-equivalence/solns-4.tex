@@ -1,0 +1,272 @@
+\documentclass[11pt]{exam}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tikz}
+
+\author{@dantevangelista}
+
+\headrule{}
+
+\begin{document}
+
+\lhead{\textbf{Intro to Math Thinking Fall 2024: Assignment 4}}
+
+\begin{enumerate}[leftmargin=0pt]
+
+\item[1.]
+\begin{displaymath}
+    \begin{array}{c c c c c c}
+        \phi & \psi & \phi \Rightarrow \psi & \psi \Rightarrow \phi & (\psi \Rightarrow \psi) \land (\psi \Rightarrow \phi) & \phi \Leftrightarrow \psi \\
+        \hline
+        T & T & T & T & T & T \\
+        T & F & F & T & F & F \\
+        F & T & T & F & F & F \\
+        F & F & T & T & T & T
+    \end{array}
+\end{displaymath}
+
+\item[2.]
+\begin{displaymath}
+    \begin{array}{c c c c c c c c}
+          \phi & \psi & \neg \phi & \phi \Rightarrow \psi & \neg \phi \lor \psi & (\phi \Rightarrow \psi) \Rightarrow (\neg \phi \lor \psi) & (\phi \Rightarrow \psi) \Leftarrow (\neg \phi \lor \psi) & (\phi \Rightarrow \psi) \Leftrightarrow (\neg \phi \lor \psi) \\
+          \hline
+          T & T & F & T & T & T & T & T\\
+          F & T & T & T & T & T & T & T\\
+          T & F & F & F & F & T & T & T\\
+          F & F & T & T & T & T& T & T
+    \end{array}
+\end{displaymath}
+
+\item[3.]
+\begin{displaymath}
+    \begin{array}{c c c c c c}
+        \phi & \psi & \neg \psi & \phi \nRightarrow \psi & \phi \land \neg \psi & (\phi \nRightarrow \psi) \Leftrightarrow (\phi \land \neg \psi) \\
+        \hline
+        T & T & F & F & F & T \\
+        F & T & F & F & F & T \\
+        T & F & T & T & T & T \\
+        F & F & T & F & F & T 
+    \end{array}
+\end{displaymath}
+
+\item[4.]
+\begin{enumerate}[label=(\alph*)]
+    \item \begin{displaymath}
+    \begin{array}{c c c c c}
+        \phi & \psi & \phi \Rightarrow \psi & \phi \land (\phi \Rightarrow \psi) & [\phi \land (\phi \Rightarrow \psi)] \Rightarrow \psi \\
+        \hline
+        T & T & T & T & T\\
+        F & T & T & F & T\\
+        T & F & F & F & T\\
+        F & F & T & F & T
+    \end{array}
+\end{displaymath}
+    \item it is a tautology meaning that $\psi$ always follows from knowing $\psi$ and $\phi \Rightarrow \psi$
+\end{enumerate}
+
+\item[5.]
+$\phi \lor \psi$ means either $\phi$ or $\psi$ is true or both \\
+Thus $\neg (\phi \lor \psi)$ means that $\phi$ and $\psi$ must both be false \\
+This is the same as saying $\neg \phi$ and $\neg \psi$ must both be false (def of negation)\\
+By def of $\emph{and}$, this can be written as $(\neg \phi) \land (\neg \psi)$
+
+\item[6.]
+\begin{enumerate}[label=(\alph*)]
+    \item 34159 is not a prime number
+    \item Roses are not red or violets are not blue
+    \item There are no hamburgers but I won't have a hot-dog
+    \item Fred won't go or he will play
+    \item The number x is non-negative and less than or equal to 10
+    \item We will lose the first game and the second
+\end{enumerate}
+
+\item[7.]
+\begin{displaymath}
+    \begin{array}{c c c c c c}
+         \phi & \psi & \neg \phi & \neg \psi & (\neg \phi) \Leftrightarrow (\neg \psi) & \phi \Leftrightarrow \psi \\
+         \hline 
+         T & T & F & F & T & T \\
+         F & T & T & F & F & F \\
+         T & F & F & T & F & F \\
+         F & F & T & T & T & T
+    \end{array}
+\end{displaymath}
+
+\item[8.]
+\begin{enumerate}[label=(\alph*)]
+    \item \begin{displaymath}
+    \begin{array}{c c c c c}
+         \phi & \psi & \phi \Rightarrow \psi & \phi \Leftarrow \psi & \phi \Leftrightarrow \psi \\
+         \hline 
+         T & T & T & T & T \\
+         F & T & T & F & F \\
+         T & F & F & T & F \\
+         F & F & T & T & T
+    \end{array}
+\end{displaymath}
+
+    \item \begin{displaymath}
+    \begin{array}{c c c c c}
+         \phi & \psi & \theta & (\psi \lor \theta)& \phi \Rightarrow (\psi \lor \theta) \\
+         \hline 
+         T & T & T & T & T \\
+         F & T & T & T & T \\
+         F & F & T & T & T \\
+         F & T & F & T & T \\
+         T & F & F & F & F \\
+         T & T & F & T & T \\
+         T & F & T & T & T \\
+         F & F & F & F & T
+    \end{array}
+\end{displaymath}
+\end{enumerate}
+
+\item[9.]
+\begin{displaymath}
+    \begin{array}{c c c c c c c c}
+         \phi & \psi & \theta & (\psi \land \theta) & \phi \Rightarrow (\psi \land \theta) & \phi \Rightarrow \psi & \phi \Rightarrow \theta & (\phi \Rightarrow \psi) \land (\phi \Rightarrow \theta)\\
+         \hline 
+         T & T & T & T & T & T & T & T\\
+         F & T & T & T & T & T & T & T\\
+         F & F & T & F & T & T & T & T\\
+         F & T & F & F & T & T & T & T\\
+         T & F & F & F & F & F & F & F\\
+         T & T & F & F & F & T & F & F\\
+         T & F & T & F & F & F & T & F\\
+         F & F & F & F & T & T & T & T
+    \end{array}
+\end{displaymath}
+
+\item[10.]
+
+$[\Rightarrow]$ Suppose $\phi$ is true \\
+$\psi \land \theta$ means that both $\psi$ and $\theta$ must be true \\
+Now suppose if $\phi$ is true, the $\psi \land \theta$ is true \\
+By definition of \emph{implies}, this can be written as $\phi \Rightarrow (\psi \land \theta)$ \\
+Since $\psi$ and $\theta$ are true, it follows: if $\phi$, then $\psi$; and if $\phi$, then $\theta$ \\
+By def of \emph{implies} and \emph{and}, this can be written as $(\phi \Rightarrow \psi) \land (\phi \Rightarrow \theta)$ \\
+\\
+$[\Leftarrow]$ Suppose $(\phi \Rightarrow \psi) \land (\phi \Rightarrow \theta)$ is true \\
+Then $\psi, \theta$ cannot both be false when $\phi$ is true \\
+By def of \emph{and}, $\psi, \theta$ cannot both be false can be written as $(\neg \psi \lor \neg \theta)$ that is equivalent to $(\psi \land \theta)$ \\
+Thus by def of \emph{implies}, the expression can be written as $\phi \Rightarrow (\psi \land \theta)$
+
+\item[11.]
+\begin{displaymath}
+    \begin{array}{c c c c c c}
+        \phi & \psi & \neg \phi & \neg \psi & \phi \Rightarrow \psi & (\neg \psi) \Rightarrow (\neg \phi) \\
+        \hline
+        T & T & F & F & T & T \\
+        F & T & T & F & T & T \\
+        T & F & F & T & F & F \\
+        F & F & T & T & T & T
+    \end{array}
+\end{displaymath}
+
+\item[12.]
+\begin{enumerate}[label=(\alph*)]
+    \item If 2 rectangles don't have the same area, they aren't congruent
+    \item If $a^2 + b^2 \neq c^2$, then the triangle with sides $a, b, c$ ($c$ largest) is not right-angled
+    \item If $n$ is not prime, then $2^n - 1$ is not prime
+    \item If the Dollar does not fall, then the Yuan won't rise
+\end{enumerate}
+
+\item[13.]
+\begin{displaymath}
+    \begin{array}{c c c c c c}
+        \phi & \psi & \neg \phi & \neg \psi & (\neg \psi) \Rightarrow (\neg \phi) & \psi \Rightarrow \phi \\
+        \hline
+        T & T & F & F & T & T \\
+        F & T & T & F & T & F \\
+        T & F & F & T & F & T \\
+        F & F & T & T & T & T
+    \end{array}
+\end{displaymath}
+
+\item[14.]
+\begin{enumerate}[label=(\alph*)]
+    \item If 2 rectangles have the same area, then they are congruent
+    \item If $a^2 + b^2 = c^2$, then a triangle with sides $a, b, c$ ($c$ largest) is right-angled
+    \item If $n$ is prime, then $2^n - 1$ is prime
+    \item If the Dollar falls, the Yuan will rise
+\end{enumerate}
+
+\section{Optional Probs}
+
+\item[1.] $\neg \psi \Rightarrow \phi$
+
+\item[2.]
+\begin{displaymath}
+    \begin{array}{c c c}
+         \phi & \psi & \phi \dot \lor \psi \\
+         \hline
+         T & T & F \\
+         F & T & T \\
+         T & F & T \\
+         F & F & F
+    \end{array}
+\end{displaymath}
+
+\item[3.] $\phi \dot \lor \psi$ is equivalent to $(\phi \land \neg \psi) \lor (\neg \phi \land \psi)$
+
+\item[4.]
+\begin{enumerate}[label=(\alph*)]
+    \item If the statement is true, then it is not false
+    \item If $x = 3$, then $x^2 = 9$
+    \item If $-3 < x < 3$, then $x^2 < 9$
+    \item If $x = 2$, then $x^2 = 4$
+\end{enumerate}
+
+\item[5.]
+\begin{displaymath}
+    \begin{array}{c c c c}
+    M & N & M \times N & M + N \\
+    \hline
+    1 & 1 & 1 & 0 \\
+    1 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 0
+    \end{array}
+\end{displaymath}
+
+\item[6.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\land$
+    \item $\dot \lor$
+    \item no
+\end{enumerate}
+
+\item[7.]
+\begin{enumerate}[label=(\alph*)]
+    \item $\lor$
+    \item $(M \land N) \lor ( \neg M \land \neg N)$
+    \item yes
+\end{enumerate}
+
+\item[8.] 2, cards B, 4
+
+\item[9.]
+Suppose $m,n$ are 2 natural numbers. If we multiply $mn$, then there are 3 cases:
+\begin{enumerate}
+    \item if at least 1 of $m, n$ is even, then $mn$ is even
+    \item if both $m, n$ are even, then $mn$ is even
+    \item if both $m, n$ are odd, then $mn$ is odd
+\end{enumerate}
+Then $mn$ is odd iff $m$ and $n$ are odd.
+
+\item[10.] False, suppose $m$ is even and $n$ is odd, then $mn$ is even. Refer to statements in \emph{9.}
+
+\item[11.] 1 face down ID, 1 7-up or vodka and tonic
+
+\item[12.] Similar, need 2 verifications. Used contrapositive in Wason's problem and process of elimination in \emph{11.} Setup for \emph{11.} made it clearer.
+
+\end{enumerate}
+\end{document}
