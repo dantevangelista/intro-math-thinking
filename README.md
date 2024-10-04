@@ -1,1 +1,1 @@
-# ♾️ Intro Math Thinking - Keith Devlin @ Stanford
+# ♾️ Introduction to Mathematical Thinking - Keith Devlin @ Stanford
