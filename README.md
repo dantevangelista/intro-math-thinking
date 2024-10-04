@@ -1,1 +1,1 @@
-# ♾️ Introduction to Mathematical Thinking - Keith Devlin @ Stanford
+# ♾️ Coursera Introduction to Mathematical Thinking - Keith Devlin @ Stanford
